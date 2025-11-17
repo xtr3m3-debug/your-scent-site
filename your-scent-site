@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Scent – Hand‑crafted Perfume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* ==== Reset & Basics ==== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#333;background:#fafafa}
+a{text-decoration:none;color:inherit}
+
+/* ==== Layout ==== */
+header{
+  position:sticky;top:0;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.08);
+  display:flex;justify-content:space-between;align-items:center;pading:1rem 2rem;z-index:10;
+}
+.logo{font-size:1.5rem;font-weight:bold;color:#22}
+nav a{margin:0 .8rem;color:#555;font-weight:500}
+nav a:hover{color:#000}
+.cta{background:#c44; color:#fff;padding:.5rem 1rem;border-radius:4px}
+.cta:hover{background:#b33}
+
+/* ==== Hero ==== */
+.hero{
+  background:url('https://images.unsplash.com/photo-15196213635-0d4f2c9c0c3e') center/cover no-repeat;
+  min-height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;color:#ff;padding:2rem;
+}
+.hero h1{font-size:2.8rem;margin-bottom:.5rem;text-shadow:0 2px 6px rgba(0,0,0,.5)}
+.hero p{font-size:1.2rem;margin-bottom:1.5rem;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.hero .btn{background:#ff;color:#c44;padding:.8rem 1.5rem;border-radius:4px;font-weight:bold}
+.hero .btn:hover{background:#f0f0f0}
+
+/* ==== Sections ==== */
+section{padding:4rem 2rem;max-width:1100px;margin:auto}
+.grid{display:grid;gap:2rem}
+@media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+
+/* Featured collection */
+.featured img{width:100%;border-radius:8px}
+.featured .info{display:flex;flex-direction:column;justify-content:center}
+.featured .info h2{font-size:2rem;margin-bottom:.5rem}
+.featured .info p{margin-bottom:1rem}
+.featured .info .buy{background:#c44;color:#fff;padding:.6rem 1.2rem;border-radius:4px;width:max-content}
+
+/* Values icons */
+.value{display:flex;flex-direction:column;align-items:center;text-align:center}
+.value img{width:60px;height:60px;margin-bottom:.8rem}
+.value h3{font-size:1.2rem;margin-bottom:.4rem}
+
+/* Testimonials */
+.carousel{position:relative;overflow:hidden}
+.carousel-inner{display:flex;transition:transform .5s ease}
+.testimonial{min-width:100%;padding:2rem;background:#fff;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+.testimonial p{font-style:italic;margin-bottom:.8rem}
+.testimonial .author{font-weight:bold}
+
+/* Newsletter */
+.newsletter{background:#c44;color:#fff;text-align:center;padding:3rem 2rem;border-radius:8px}
+.newsletter input[type=email]{padding:.8rem 1rem;border:none;border-radius:4px;margin-right:.5rem;width:250px;max-width:80%}
+.newsletter button{background:#fff;color:#c44;padding:.8rem 1.2rem;border:none;border-radius:4px}
+
+/* Footer */
+footer{background:#222;color:#bb;padding:2rem;text-align:center;font-size:.9rem}
+footer a{color:#b;margin:0 .5rem}
+footer a:hover{color:#fff}
+
+/* ==== Responsive tweaks ==== */
+@media(max-width:599px){
+  header{flex-direction:column;gap:.5rem}
+  nav{display:flex;flex-wrap:wrap;justify-content:center}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Your Scent</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#collection">Collection</a>
+    <a href="#story">Story</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#collection" class="cta">Shop Now</a>
+</header>
+
+<section class="hero" id="home">
+  <h1>Discover Your Signature Aroma</h1>
+  <p>Hand‑crafted, timeless, unforgettable.</p>
+  <a href="#collection" class="btn">Explore Collection</a>
+</section>
+
+<section id="collection" class="featured grid grid-2">
+  <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" alt="Your Scent Bottle">
+  <div class="info">
+    <h2>Essence No. 1</h2>
+    <p>A luminous blend of bergamot, jasmine, and amber, inspired by sunrise over the Mediterranean.</p>
+    <a href="#" class="buy">Buy Now – $79</a>
+  </div>
+</section>
+
+<section class="values grid grid-3">
+  <div class="value">
+    <img src="https://img.icons8.com/ios-filled/100/ffffff/natural.png" alt="">
+    <h3>Natural Ingredients</h3>
+    <p>Only ethically sourced botanicals.</p>
+  </div>
+  <div class="value">
+    <img src="https://img.icons8.com/ios-filled/100/ffffff/recycle.png" alt="">
+    <h3>Sustainable Packaging</h3>
+    <p>Recyclable glass, biodegradable caps.</p>
+  </div>
+  <div class="value">
+    <img src="https://img.icons8.com/ios-filled/100/ffffff/artisan.png" alt="">
+    <h3>Artisan Craftsmanship</h3>
+    <p>Small‑batch, hand‑filled.</p>
+  </div>
+</section>
+
+<section class="testimonials carousel">
+  <div class="carousel-inner">
+    <div class="testimonial">
+      <p>“A scent that lingers like a memory. Absolutely love it!”</p>
+      <div class="author">— Maya L.</div>
+    </div>
+    <div class="testimonial">
+      <p>“Elegant, subtle, and long‑lasting. My new favorite.”</p>
+      <div class="author">— Carlos R.</div>
+    </div>
+    <div class="testimonial">
+      <p>“The packaging is gorgeous, and the fragrance is pure magic.”</p>
+      <div class="author">— Elena K.</div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <h2>Get a Free Sample</h2>
+  <p>Enter your email and we’ll send you a 5 ml vial of Essence No. 1.</p>
+  <form action="#" method="POST">
+    <input type="email" placeholder="you@example.com" required>
+    <button type="submit">Send Me a Sample</button>
+  </form>
+</section>
+
+<footer id="contact">
+  <p>&copy; 2025 Your Scent. All rights reserved.</p>
+  <p>
+    <a href="#">About</a> |
+    <a href="#">Privacy</a> |
+    <a href="#">Terms</a>
+ </p>
+  <p>
+    <a href="https://instagram.com"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png"/></a>
+    <a href="https://facebook.com"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/facebook-new.png"/></a>
+    <a href="https://tiktok.com"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/tiktok.png"/></a>
+  </p>
+</footer>
+
+<script>
+// Simple auto‑slide for testimonials (no external libs)
+let idx = 0;
+const slides = document.querySelectorAll('.testimonial');
+const total = slides.length;
+setInterval(()=>{
+  idx = (idx + 1) % total;
+  document.querySelector('.carousel-inner').style.transform = `translateX(-${idx * 100}%)`;
+},4000);
+</script>
+
+</body>
+</html>
+Initial site
